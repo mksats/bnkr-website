@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #101914;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    /* Add any specific sizing if needed */
+}
+
+/* Optional: Add hover effect */
+.logo-container svg:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
