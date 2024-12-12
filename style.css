@@ -8,9 +8,6 @@ body {
     animation: backgroundCycle 20s infinite;
 }
 
-.logo-container {
-    /* Add any specific sizing if needed */
-}
 
 .logo-container svg path {
     animation: logoCycle 20s infinite;
