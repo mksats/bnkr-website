@@ -9,18 +9,14 @@ body {
 
 .logo-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
-}
-
-.logo-container svg {
-    cursor: pointer;
 }
 
 .logo-container .wordmark {
-    width: 200px; /* Scaled down from 624px */
+    width: 300px; /* Increased from 200px */
     height: auto;
+    cursor: pointer;
 }
 
 .logo-container svg path {
