@@ -12,5 +12,42 @@
             <path d="M148.879 128.879C148.316 128.316 147.553 128 146.757 128H136V116H146.757C147.553 116 148.316 115.684 148.879 115.121L171.121 92.8787C171.684 92.3161 172 91.553 172 90.7574V58.4853C172 56.894 171.368 55.3679 170.243 54.2426L145.757 29.7574C144.632 28.6321 143.106 28 141.515 28H98V0H66V28H0V220H66V248H98V220H143.515C145.106 220 146.632 219.368 147.757 218.243L172.243 193.757C173.368 192.632 174 191.106 174 189.515V155.243C174 154.447 173.684 153.684 173.121 153.121L148.879 128.879ZM96 196H68V52H96V196Z" fill="#FAFAFA"/>
         </svg>
     </div>
+    <script>
+        const colors = [
+            '#101914', // darkest
+            '#262F2A',
+            '#4D5D54',
+            '#738B7E',
+            '#99BAA8',
+            '#C2D6CB',
+            '#D6E3DC',
+            '#EBF1EE',
+            '#CAFA00',
+            '#FAFAFA'  // lightest
+        ];
+
+        function getContrastingPair() {
+            // Get first random color
+            const index1 = Math.floor(Math.random() * colors.length);
+            // Get second color from opposite end of the palette
+            let index2;
+            do {
+                index2 = Math.floor(Math.random() * colors.length);
+            } while (Math.abs(index1 - index2) < 4); // Ensure colors are at least 4 steps apart
+
+            return [colors[index1], colors[index2]];
+        }
+
+        function updateColors() {
+            const [color1, color2] = getContrastingPair();
+            document.body.style.backgroundColor = color1;
+            document.querySelector('.logo-container svg path').style.fill = color2;
+        }
+
+        // Initial color set
+        updateColors();
+        // Update colors every 5 seconds
+        setInterval(updateColors, 5000);
+    </script>
 </body>
 </html>
