@@ -7,6 +7,22 @@ body {
     align-items: center;
 }
 
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo-container svg {
+    cursor: pointer;
+}
+
+.logo-container .wordmark {
+    width: 200px; /* Scaled down from 624px */
+    height: auto;
+}
+
 .logo-container svg path {
     transition: none;
 }
