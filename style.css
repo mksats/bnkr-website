@@ -1,19 +1,48 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #101914;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: backgroundCycle 20s infinite;
 }
 
 .logo-container {
     /* Add any specific sizing if needed */
 }
 
-/* Optional: Add hover effect */
+.logo-container svg path {
+    animation: logoCycle 20s infinite;
+}
+
 .logo-container svg:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+}
+
+@keyframes backgroundCycle {
+    0%, 100% { background-color: #101914; }
+    10% { background-color: #262F2A; }
+    20% { background-color: #4D5D54; }
+    30% { background-color: #738B7E; }
+    40% { background-color: #99BAA8; }
+    50% { background-color: #C2D6CB; }
+    60% { background-color: #D6E3DC; }
+    70% { background-color: #EBF1EE; }
+    80% { background-color: #CAFA00; }
+    90% { background-color: #FAFAFA; }
+}
+
+@keyframes logoCycle {
+    0%, 100% { fill: #FAFAFA; }
+    10% { fill: #EBF1EE; }
+    20% { fill: #D6E3DC; }
+    30% { fill: #C2D6CB; }
+    40% { fill: #99BAA8; }
+    50% { fill: #738B7E; }
+    60% { fill: #4D5D54; }
+    70% { fill: #262F2A; }
+    80% { fill: #101914; }
+    90% { fill: #CAFA00; }
 }
