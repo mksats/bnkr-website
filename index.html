@@ -44,16 +44,17 @@
     </div>
     <script>
         const colors = [
-            '#101914', // darkest
+            '#101914', // darkest green
             '#262F2A',
             '#4D5D54',
             '#738B7E',
             '#99BAA8',
             '#C2D6CB',
             '#D6E3DC',
-            '#EBF1EE',
-            '#CAFA00',
-            '#FAFAFA'  // lightest
+            '#EBF1EE',  // lightest green
+            '#CAFA00',  // lime
+            '#FFB3F3',  // pink
+            '#FF4E00'   // orange
         ];
 
         function getContrastingPair() {
@@ -61,7 +62,7 @@
             let index2;
             do {
                 index2 = Math.floor(Math.random() * colors.length);
-            } while (Math.abs(index1 - index2) < 4);
+            } while (Math.abs(index1 - index2) < 4 || index1 === index2);
 
             return [colors[index1], colors[index2]];
         }
