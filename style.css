@@ -13,10 +13,18 @@ body {
     align-items: center;
 }
 
-.logo-container .wordmark {
-    width: 300px; /* Increased from 200px */
-    height: auto;
+.logo-container svg {
     cursor: pointer;
+}
+
+.logo-container .main-logo {
+    width: 174px;
+    height: auto;
+}
+
+.logo-container .wordmark {
+    width: 300px;
+    height: auto;
 }
 
 .logo-container svg path {
