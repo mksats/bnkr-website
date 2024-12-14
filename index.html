@@ -90,9 +90,8 @@
             }
         }
 
-        // Add click event listeners to both logos
-        document.querySelector('.main-logo').addEventListener('click', updateColors);
-        document.querySelector('.wordmark').addEventListener('click', updateColors);
+        // Add click event listener to the body instead of individual logos
+        document.body.addEventListener('click', updateColors);
 
         // Initial color set
         updateColors();
